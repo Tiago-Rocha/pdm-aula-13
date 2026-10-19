@@ -3,10 +3,9 @@ import 'package:flutter/material.dart';
 import 'api_client.dart';
 import 'models.dart';
 
-/// TODO 1: this screen knows the URL, the JSON and the ApiClient. Move
-/// _load to a ForecastRepository and give the screen the repository.
-/// TODO 2: the loading, error and data states also live here. Move them
-/// to a ForecastNotifier and turn this screen into a StatelessWidget.
+/// This screen does everything by itself: the URL, the JSON, the loading,
+/// error and data states, and the drawing. It works. On main, each of
+/// these jobs has its own file, in its own folder.
 class IslandsScreen extends StatefulWidget {
   const IslandsScreen({super.key, required this.api});
 
