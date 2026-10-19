@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../state/favorites_notifier.dart';
 import '../state/forecast_notifier.dart';
+import '../widgets/favorite_button.dart';
+import 'favorites_screen.dart';
 
 /// Draws the state of the ForecastNotifier. Knows no URLs and no JSON.
 class IslandsScreen extends StatelessWidget {
@@ -11,7 +14,24 @@ class IslandsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final forecast = context.watch<ForecastNotifier>(); // rebuilds on notify
     return Scaffold(
-      appBar: AppBar(title: const Text('Tempo Açores')),
+      appBar: AppBar(
+        title: const Text('Tempo Açores'),
+        actions: [
+          Consumer<FavoritesNotifier>(
+            builder: (context, favorites, child) => IconButton(
+              icon: Badge(
+                isLabelVisible: favorites.count > 0,
+                label: Text('${favorites.count}'),
+                child: const Icon(Icons.star),
+              ),
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const FavoritesScreen()),
+              ),
+            ),
+          ),
+        ],
+      ),
       body: _body(context, forecast),
     );
   }
@@ -39,6 +59,7 @@ class IslandsScreen extends StatelessWidget {
       itemBuilder: (context, i) => ListTile(
         leading: Image.network(forecast.islands[i].imageUrl, width: 56),
         title: Text(forecast.islands[i].name),
+        trailing: FavoriteButton(islandId: forecast.islands[i].id),
       ),
     );
   }
