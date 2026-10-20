@@ -1,5 +1,5 @@
-import '../models/forecast.dart';
-import '../models/island.dart';
+import 'forecast.dart';
+import 'island.dart';
 import 'api_client.dart';
 import 'forecast_repository.dart';
 

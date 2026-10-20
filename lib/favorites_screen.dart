@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../state/favorites_notifier.dart';
-import '../state/forecast_notifier.dart';
-import '../widgets/favorite_button.dart';
+import 'favorites_notifier.dart';
+import 'forecast_notifier.dart';
+import 'favorite_button.dart';
 
 /// The favourite islands. Reads two notifiers.
 class FavoritesScreen extends StatelessWidget {

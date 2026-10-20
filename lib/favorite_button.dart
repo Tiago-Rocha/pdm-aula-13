@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../state/favorites_notifier.dart';
+import 'favorites_notifier.dart';
 
 /// The star of one island. Used by both screens.
 class FavoriteButton extends StatelessWidget {

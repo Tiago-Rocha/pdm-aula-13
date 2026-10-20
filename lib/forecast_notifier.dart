@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 
-import '../data/forecast_repository.dart';
-import '../models/island.dart';
+import 'forecast_repository.dart';
+import 'island.dart';
 
 /// The state of the islands screen. Knows the repository, not the widgets.
 class ForecastNotifier extends ChangeNotifier {

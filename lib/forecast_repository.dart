@@ -1,5 +1,5 @@
-import '../models/forecast.dart';
-import '../models/island.dart';
+import 'forecast.dart';
+import 'island.dart';
 
 /// What the app can ask for. The screens only see this.
 abstract class ForecastRepository {

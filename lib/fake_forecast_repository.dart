@@ -1,5 +1,5 @@
-import '../models/forecast.dart';
-import '../models/island.dart';
+import 'forecast.dart';
+import 'island.dart';
 import 'forecast_repository.dart';
 
 /// Same interface, fixed data: no API and no credentials.

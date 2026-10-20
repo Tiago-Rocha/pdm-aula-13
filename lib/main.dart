@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'data/api_client.dart';
-import 'data/fake_forecast_repository.dart';
-import 'data/forecast_repository.dart';
-import 'data/http_forecast_repository.dart';
-import 'screens/islands_screen.dart';
-import 'state/favorites_notifier.dart';
-import 'state/forecast_notifier.dart';
+import 'api_client.dart';
+import 'fake_forecast_repository.dart';
+import 'forecast_repository.dart';
+import 'http_forecast_repository.dart';
+import 'islands_screen.dart';
+import 'favorites_notifier.dart';
+import 'forecast_notifier.dart';
 
 const clientId = String.fromEnvironment('CLIENT_ID');
 const clientSecret = String.fromEnvironment('CLIENT_SECRET');
